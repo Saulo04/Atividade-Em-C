@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int valor, quadrado, cubo;
+
+    printf("Digite um valor inteiro: ");
+    scanf("%d", &valor);
+
+    quadrado = valor * valor;
+    cubo = valor * valor * valor;
+
+    printf("Quadrado de %d: %d\n", valor, quadrado);
+    printf("Cubo de %d: %d\n", valor, cubo);
+
+    return 0;
+}

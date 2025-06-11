@@ -1,0 +1,23 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída para printf e scanf
+
+int main() {
+    // Declaração das variáveis
+    int numeroCavalos;      // Armazena a quantidade de cavalos comprados
+    int ferradurasNecessarias; // Armazena o total de ferraduras calculadas
+
+    printf("--- Calculadora de Ferraduras para Haras ---\n");
+
+    // 1. Entrada de dados: Solicita o numero de cavalos
+    printf("Digite o numero de cavalos comprados para o haras: ");
+    scanf("%d", &numeroCavalos); // Lê a quantidade de cavalos
+
+    // 2. Calculo do total de ferraduras
+    // Cada cavalo precisa de 4 ferraduras
+    ferradurasNecessarias = numeroCavalos * 4;
+
+    // 3. Exibicao do resultado
+    printf("\n--- Resultado ---\n");
+    printf("Para equipar %d cavalos, serao necessarias %d ferraduras.\n", numeroCavalos, ferradurasNecessarias);
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

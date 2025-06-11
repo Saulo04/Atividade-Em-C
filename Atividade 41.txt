@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    int A, B;
+
+    // Entrada dos dois números
+    printf("Digite dois números inteiros:\n");
+    scanf("%d %d", &A, &B);
+
+    // Verifica se são iguais ou diferentes
+    if (A == B) {
+        printf("Os números são iguais: %d e %d\n", A, B);
+        printf("Maior: %d\n", A);
+        printf("Menor: %d\n", B);
+    } else {
+        printf("Os números são diferentes.\n");
+
+        // Verifica qual é o maior e o menor
+        if (A > B) {
+            printf("Maior: %d\n", A);
+            printf("Menor: %d\n", B);
+        } else {
+            printf("Maior: %d\n", B);
+            printf("Menor: %d\n", A);
+        }
+    }
+
+    return 0;
+}

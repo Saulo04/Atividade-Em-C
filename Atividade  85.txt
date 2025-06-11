@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    float alturaPessoa, sombraPessoa, sombraPredio, alturaPredio;
+
+    // Entrada dos dados
+    printf("Digite sua altura (em metros): ");
+    scanf("%f", &alturaPessoa);
+
+    printf("Digite o comprimento da sua sombra (em metros): ");
+    scanf("%f", &sombraPessoa);
+
+    printf("Digite o comprimento da sombra do predio (em metros): ");
+    scanf("%f", &sombraPredio);
+
+    // Verifica para evitar divisão por zero
+    if (sombraPessoa == 0) {
+        printf("O comprimento da sombra da pessoa nao pode ser zero.\n");
+    } else {
+        // Cálculo da altura do prédio usando semelhança de triângulos
+        alturaPredio = (alturaPessoa * sombraPredio) / sombraPessoa;
+
+        // Exibe o resultado
+        printf("Altura do predio: %.2f metros\n", alturaPredio);
+    }
+
+    return 0;
+}

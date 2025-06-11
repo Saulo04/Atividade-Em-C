@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    int qtd1, qtd2, qtd3;
+    float preco1 = 0.50, preco2 = 0.60, preco3 = 0.75;
+    float total1 = 0, total2 = 0, total3 = 0, total_geral = 0;
+
+    // Entrada das quantidades vendidas
+    printf("Digite a quantidade de picolés do tipo 1 vendidos (R$ 0.50): ");
+    scanf("%d", &qtd1);
+
+    printf("Digite a quantidade de picolés do tipo 2 vendidos (R$ 0.60): ");
+    scanf("%d", &qtd2);
+
+    printf("Digite a quantidade de picolés do tipo 3 vendidos (R$ 0.75): ");
+    scanf("%d", &qtd3);
+
+    // Cálculo total por tipo
+    total1 = qtd1 * preco1;
+    total2 = qtd2 * preco2;
+    total3 = qtd3 * preco3;
+
+    // Cálculo do total geral
+    total_geral = total1 + total2 + total3;
+
+    // Impressão dos resultados usando estrutura se (if)
+    if (1) {
+        printf("\nTipo 1:\n");
+        printf("Quantidade vendida: %d\n", qtd1);
+        printf("Total arrecadado: R$ %.2f\n", total1);
+    }
+
+    if (1) {
+        printf("\nTipo 2:\n");
+        printf("Quantidade vendida: %d\n", qtd2);
+        printf("Total arrecadado: R$ %.2f\n", total2);
+    }
+
+    if (1) {
+        printf("\nTipo 3:\n");
+        printf("Quantidade vendida: %d\n", qtd3);
+        printf("Total arrecadado: R$ %.2f\n", total3);
+    }
+
+    if (1) {
+        printf("\nTotal geral arrecadado: R$ %.2f\n", total_geral);
+    }
+
+    return 0;
+}

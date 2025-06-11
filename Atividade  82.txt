@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int blusas;      // Número de blusas produzidas
+    float novelos;   // Quantidade total de novelos usados
+    float novelosPorBlusa;
+
+    // Entrada dos dados
+    printf("Digite o numero de blusas produzidas: ");
+    scanf("%d", &blusas);
+
+    printf("Digite a quantidade total de novelos usados: ");
+    scanf("%f", &novelos);
+
+    // Verifica se o número de blusas é diferente de zero para evitar divisão por zero
+    if (blusas == 0) {
+        printf("Numero de blusas nao pode ser zero.\n");
+    } else {
+        // Cálculo dos novelos por blusa
+        novelosPorBlusa = novelos / blusas;
+
+        // Saída do resultado
+        printf("Quantidade de novelos usados por blusa: %.2f\n", novelosPorBlusa);
+    }
+
+    return 0;
+}

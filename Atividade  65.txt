@@ -1,0 +1,38 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída para funções como printf e scanf
+
+int main() {
+    // Declaração das variáveis
+    int opcao; // Variável para a opção escolhida
+    int num1;  // Primeiro número
+    int num2;  // Segundo número
+    int num3;  // Terceiro número
+
+    // 1. Entrada de dados: Solicita que o usuário digite os quatro números
+    printf("--- Escolha de Numero ---\n");
+    printf("Digite um valor para a Opcao (2, 3 ou 4): ");
+    scanf("%d", &opcao); // Lê o valor da Opcao
+
+    printf("Digite o valor para Num1: ");
+    scanf("%d", &num1); // Lê o valor de Num1
+
+    printf("Digite o valor para Num2: ");
+    scanf("%d", &num2); // Lê o valor de Num2
+
+    printf("Digite o valor para Num3: ");
+    scanf("%d", &num3); // Lê o valor de Num3
+
+    // 2. Verificacao da Opcao e exibicao do numero correspondente
+    printf("\n--- Resultado ---\n");
+    if (opcao == 2) {
+        printf("A opcao escolhida foi 2. O valor de Num1 e: %d\n", num1);
+    } else if (opcao == 3) {
+        printf("A opcao escolhida foi 3. O valor de Num2 e: %d\n", num2);
+    } else if (opcao == 4) {
+        printf("A opcao escolhida foi 4. O valor de Num3 e: %d\n", num3);
+    } else {
+        // Mensagem para valores de Opcao diferentes de 2, 3 ou 4 (mesmo que o problema diga que nao ocorrerá)
+        printf("Opcao invalida! Por favor, digite 2, 3 ou 4.\n");
+    }
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

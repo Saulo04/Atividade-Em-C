@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    float litrosRefresco, litrosAgua, litrosSuco;
+
+    // Entrada da quantidade total de refresco
+    printf("Digite a quantidade de litros de refresco que deseja fazer: ");
+    scanf("%f", &litrosRefresco);
+
+    // Cálculo das quantidades de água e suco
+    litrosAgua = (8.0 / 10.0) * litrosRefresco;
+    litrosSuco = (2.0 / 10.0) * litrosRefresco;
+
+    // Exibe os resultados
+    printf("Litros de agua mineral necessarios: %.2f litros\n", litrosAgua);
+    printf("Litros de suco de maracuja necessarios: %.2f litros\n", litrosSuco);
+
+    return 0;
+}

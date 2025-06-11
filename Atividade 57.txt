@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define TAM 5  // Tamanho dos vetores de entrada
+
+int main() {
+    int vetor1[TAM], vetor2[TAM];
+    int vetorUniao[TAM * 2];
+
+    // Leitura do primeiro vetor
+    printf("Digite os elementos do primeiro vetor:\n");
+    for (int i = 0; i < TAM; i++) {
+        printf("vetor1[%d]: ", i);
+        scanf("%d", &vetor1[i]);
+    }
+
+    // Leitura do segundo vetor
+    printf("\nDigite os elementos do segundo vetor:\n");
+    for (int i = 0; i < TAM; i++) {
+        printf("vetor2[%d]: ", i);
+        scanf("%d", &vetor2[i]);
+    }
+
+    // União dos dois vetores em vetorUniao
+    for (int i = 0; i < TAM; i++) {
+        vetorUniao[i] = vetor1[i];           // Copia vetor1
+        vetorUniao[i + TAM] = vetor2[i];     // Copia vetor2 logo após
+    }
+
+    // Exibição do vetor de união
+    printf("\nVetor união:\n");
+    for (int i = 0; i < TAM * 2; i++) {
+        printf("vetorUniao[%d] = %d\n", i, vetorUniao[i]);
+    }
+
+    return 0;
+}

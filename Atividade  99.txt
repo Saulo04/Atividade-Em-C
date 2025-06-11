@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    float salario = 1200.00;
+    float c1 = 200.00;
+    float c2 = 120.00;
+    float multa = 0.02;
+    float totalConta1, totalConta2, totalPago, saldoRestante;
+
+    // Calcula o valor das contas com multa
+    totalConta1 = c1 + (c1 * multa);
+    totalConta2 = c2 + (c2 * multa);
+
+    // Soma o total pago
+    totalPago = totalConta1 + totalConta2;
+
+    // Calcula o saldo restante do salário
+    saldoRestante = salario - totalPago;
+
+    // Exibe o resultado
+    printf("Saldo restante do salario apos pagamento das contas: R$ %.2f\n", saldoRestante);
+
+    return 0;
+}

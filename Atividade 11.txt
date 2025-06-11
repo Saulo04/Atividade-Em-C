@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int a;
+    int negativos = 0;
+
+    // Loop para ler 5 valores
+    for (int i = 0; i < 5; i++) {
+        printf("Digite o valor %d: ", i + 1);
+        scanf("%d", &a);
+
+        // Verifica se o valor é negativo
+        if (a < 0) {
+            negativos++;
+        }
+    }
+
+    // Exibe o total de valores negativos
+    printf("Quantidade de valores negativos: %d\n", negativos);
+
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    float salarioMinimo, salarioFuncionario, quantidade;
+
+    // Entrada dos valores
+    printf("Digite o valor do salario minimo: ");
+    scanf("%f", &salarioMinimo);
+
+    printf("Digite o salario do funcionario: ");
+    scanf("%f", &salarioFuncionario);
+
+    // Cálculo da quantidade de salários mínimos
+    quantidade = salarioFuncionario / salarioMinimo;
+
+    // Exibe o resultado
+    printf("O funcionario ganha %.2f salarios minimos.\n", quantidade);
+
+    return 0;
+}

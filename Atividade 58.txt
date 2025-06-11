@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define LINHAS 3
+#define COLUNAS 4
+
+int main() {
+    int matriz[LINHAS][COLUNAS];
+    int transposta[COLUNAS][LINHAS];
+
+    // Entrada da matriz
+    printf("Digite os elementos da matriz %dx%d:\n", LINHAS, COLUNAS);
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+            printf("matriz[%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Calcula a transposta
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+            transposta[j][i] = matriz[i][j];
+        }
+    }
+
+    // Imprime a matriz transposta
+    printf("\nMatriz transposta %dx%d:\n", COLUNAS, LINHAS);
+    for (int i = 0; i < COLUNAS; i++) {
+        for (int j = 0; j < LINHAS; j++) {
+            printf("%d\t", transposta[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

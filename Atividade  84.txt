@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int moedas1, moedas5, moedas10, moedas25, moedas50, moedas1real;
+    float total;
+
+    // Entrada da quantidade de moedas de cada tipo
+    printf("Quantidade de moedas de 1 centavo: ");
+    scanf("%d", &moedas1);
+
+    printf("Quantidade de moedas de 5 centavos: ");
+    scanf("%d", &moedas5);
+
+    printf("Quantidade de moedas de 10 centavos: ");
+    scanf("%d", &moedas10);
+
+    printf("Quantidade de moedas de 25 centavos: ");
+    scanf("%d", &moedas25);
+
+    printf("Quantidade de moedas de 50 centavos: ");
+    scanf("%d", &moedas50);
+
+    printf("Quantidade de moedas de 1 real: ");
+    scanf("%d", &moedas1real);
+
+    // Cálculo do total em reais
+    total = moedas1 * 0.01 + moedas5 * 0.05 + moedas10 * 0.10 + moedas25 * 0.25 + moedas50 * 0.50 + moedas1real * 1.0;
+
+    // Exibe o resultado
+    printf("Total economizado: R$ %.2f\n", total);
+
+    return 0;
+}

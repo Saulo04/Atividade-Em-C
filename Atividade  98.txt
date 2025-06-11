@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    int anoNascimento, anoAtual;
+    int idadeAnos, idadeMeses, idadeDias, idadeSemanas;
+
+    // Entrada dos dados
+    printf("Digite o ano de nascimento: ");
+    scanf("%d", &anoNascimento);
+
+    printf("Digite o ano atual: ");
+    scanf("%d", &anoAtual);
+
+    // Cálculo da idade em anos
+    idadeAnos = anoAtual - anoNascimento;
+
+    // Cálculo em meses
+    idadeMeses = idadeAnos * 12;
+
+    // Cálculo em dias (considerando 30 dias por mês)
+    idadeDias = idadeMeses * 30;
+
+    // Cálculo em semanas (cada semana tem 7 dias)
+    idadeSemanas = idadeDias / 7;
+
+    // Exibe os resultados
+    printf("Idade em anos: %d\n", idadeAnos);
+    printf("Idade em meses: %d\n", idadeMeses);
+    printf("Idade em dias: %d\n", idadeDias);
+    printf("Idade em semanas: %d\n", idadeSemanas);
+
+    return 0;
+}

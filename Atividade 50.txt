@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int i, num, soma = 0, maior, menor;
+    float media;
+
+    // Entrada do primeiro número
+    printf("Digite o 1º número inteiro: ");
+    scanf("%d", &num);
+
+    soma = num;
+    maior = num;
+    menor = num;
+
+    // Entrada dos próximos 9 números
+    for (i = 2; i <= 10; i++) {
+        printf("Digite o %dº número inteiro: ", i);
+        scanf("%d", &num);
+
+        soma += num;
+
+        if (num > maior) {
+            maior = num;
+        }
+
+        if (num < menor) {
+            menor = num;
+        }
+    }
+
+    media = soma / 10.0;
+
+    // Exibe os resultados
+    printf("\nMédia: %.2f\n", media);
+    printf("Maior valor: %d\n", maior);
+    printf("Menor valor: %d\n", menor);
+
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    float num1, num2, num3, produto;
+
+    // Entrada dos três números
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &num2);
+
+    printf("Digite o terceiro numero: ");
+    scanf("%f", &num3);
+
+    // Cálculo da multiplicação
+    produto = num1 * num2 * num3;
+
+    // Exibe o resultado
+    printf("O produto dos tres numeros e: %.2f\n", produto);
+
+    return 0;
+}

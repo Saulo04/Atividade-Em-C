@@ -1,0 +1,30 @@
+#include <stdio.h> // Required for input/output operations (printf, scanf)
+
+int main() {
+    int N;       // Stores the positive integer entered by the user
+    double E = 1.0; // Stores the calculated value of E. Initialized to 1.0 for the first term.
+    long long factorial = 1; // Stores the factorial of each number. Use long long to avoid overflow for larger N.
+
+    // 1. Read N and perform input validation
+    do {
+        printf("Digite um valor inteiro e positivo para N: ");
+        scanf("%d", &N);
+
+        if (N <= 0) {
+            printf("Erro: N deve ser um valor inteiro e positivo. Tente novamente.\n");
+        }
+    } while (N <= 0); // Loop until a positive integer N is entered
+
+    // 4. Calculate factorials and sum to E
+    // The loop starts from 1 because 1/0! is implicitly included in E = 1.0
+    // We calculate 1/1!, 1/2!, ..., 1/N!
+    for (int i = 1; i <= N; i++) {
+        factorial *= i; // Calculate i!
+        E += 1.0 / factorial; // Add 1/i! to E
+    }
+
+    // 5. Write the value of E
+    printf("O valor de E para N = %d é: %.10f\n", N, E); // Print E with 10 decimal places for precision
+
+    return 0; // Indicate successful execution
+}

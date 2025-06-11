@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int numero, soma, i;
+
+    for (int contador = 1; contador <= 5; contador++) {
+        printf("Digite o %dº número: ", contador);
+        scanf("%d", &numero);
+
+        soma = 0;
+
+        // Calcula a soma dos divisores próprios
+        for (i = 1; i <= numero / 2; i++) {
+            if (numero % i == 0) {
+                soma += i;
+            }
+        }
+
+        if (soma == numero) {
+            printf("%d é um número PERFEITO.\n\n", numero);
+        } else {
+            printf("%d NÃO é um número perfeito.\n\n", numero);
+        }
+    }
+
+    return 0;
+}

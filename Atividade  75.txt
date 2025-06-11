@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int dias_total;
+    int anos, meses, dias;
+
+    // Entrada
+    printf("Digite o total de dias sem acidentes: ");
+    scanf("%d", &dias_total);
+
+    // Cálculo da conversão
+    anos = dias_total / 360;
+    dias_total = dias_total % 360;
+
+    meses = dias_total / 30;
+    dias = dias_total % 30;
+
+    // Saída
+    printf("Tempo sem acidentes: %d ano(s), %d mes(es) e %d dia(s).\n", anos, meses, dias);
+
+    return 0;
+}

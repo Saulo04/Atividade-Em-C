@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int A, B, C;
+
+    // Entrada dos três números
+    printf("Digite três números inteiros:\n");
+    scanf("%d %d %d", &A, &B, &C);
+
+    // Verifica e imprime em ordem decrescente usando apenas if
+    if (A >= B && B >= C) {
+        printf("Ordem decrescente: %d %d %d\n", A, B, C);
+    } else if (A >= C && C >= B) {
+        printf("Ordem decrescente: %d %d %d\n", A, C, B);
+    } else if (B >= A && A >= C) {
+        printf("Ordem decrescente: %d %d %d\n", B, A, C);
+    } else if (B >= C && C >= A) {
+        printf("Ordem decrescente: %d %d %d\n", B, C, A);
+    } else if (C >= A && A >= B) {
+        printf("Ordem decrescente: %d %d %d\n", C, A, B);
+    } else if (C >= B && B >= A) {
+        printf("Ordem decrescente: %d %d %d\n", C, B, A);
+    }
+
+    return 0;
+}

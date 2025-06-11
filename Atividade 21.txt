@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int n, valor;
+
+    printf("Digite quantos valores deseja informar: ");
+    scanf("%d", &n);
+
+    for (int i = 0; i < n; i++) {
+        printf("\nDigite o %dº valor: ", i + 1);
+        scanf("%d", &valor);
+
+        if (valor < 0) {
+            printf("%d! = Fatorial não definido para número negativo.\n", valor);
+        } else {
+            unsigned long long fatorial = 1;
+
+            printf("%d! = ", valor);
+            for (int j = valor; j > 0; j--) {
+                printf("%d", j);
+                if (j > 1) {
+                    printf(" x ");
+                }
+                fatorial *= j;
+            }
+
+            if (valor == 0) {
+                printf("1");
+            }
+
+            printf(" = %llu\n", fatorial);
+        }
+    }
+
+    return 0;
+}

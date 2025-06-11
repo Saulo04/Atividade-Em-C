@@ -1,0 +1,39 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída para printf e scanf
+
+int main() {
+    // Declaração das variáveis
+    int quantidadePaes;           // Quantidade de pães franceses vendidos
+    int quantidadeBroas;          // Quantidade de broas vendidas
+    float precoPao = 0.12;        // Preço de um pãozinho
+    float precoBroa = 1.50;       // Preço de uma broa
+    float totalArrecadadoPaes;    // Total arrecadado com pães
+    float totalArrecadadoBroas;   // Total arrecadado com broas
+    float totalGeralArrecadado;   // Total arrecadado com pães e broas
+    float valorParaPoupanca;      // Valor a ser guardado na poupança
+
+    printf("--- Calculadora de Vendas Hotpao ---\n");
+
+    // 1. Entrada de dados: Solicita as quantidades vendidas
+    printf("Digite a quantidade de paes franceses vendidos: ");
+    scanf("%d", &quantidadePaes);
+
+    printf("Digite a quantidade de broas vendidas: ");
+    scanf("%d", &quantidadeBroas);
+
+    // 2. Calculo da arrecadacao
+    totalArrecadadoPaes = quantidadePaes * precoPao;
+    totalArrecadadoBroas = quantidadeBroas * precoBroa;
+    totalGeralArrecadado = totalArrecadadoPaes + totalArrecadadoBroas;
+
+    // 3. Calculo da poupanca (10% do total arrecadado)
+    valorParaPoupanca = totalGeralArrecadado * 0.10;
+
+    // 4. Exibicao dos resultados
+    printf("\n--- Resumo do Dia ---\n");
+    printf("Total arrecadado com paes: R$ %.2f\n", totalArrecadadoPaes);
+    printf("Total arrecadado com broas: R$ %.2f\n", totalArrecadadoBroas);
+    printf("Total geral arrecadado (paes + broas): R$ %.2f\n", totalGeralArrecadado);
+    printf("Valor a ser guardado na poupanca (10%%): R$ %.2f\n", valorParaPoupanca);
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

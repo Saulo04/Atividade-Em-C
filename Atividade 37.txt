@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int A, B, C, soma;
+
+    // Leitura dos valores
+    printf("Digite os valores de A, B e C:\n");
+    scanf("%d %d %d", &A, &B, &C);
+
+    soma = A + B;
+
+    // Verifica a relação entre soma e C usando if
+    if (soma < C) {
+        printf("A soma de A + B é menor que C.\n");
+    } else if (soma > C) {
+        printf("A soma de A + B é maior que C.\n");
+    } else {
+        printf("A soma de A + B é igual a C.\n");
+    }
+
+    return 0;
+}

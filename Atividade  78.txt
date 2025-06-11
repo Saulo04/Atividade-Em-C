@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int quantidade;
+    float queijo_kg, presunto_kg, carne_kg;
+
+    // Entrada
+    printf("Digite a quantidade de sanduíches a serem feitos: ");
+    scanf("%d", &quantidade);
+
+    // Cálculos em gramas convertidos para quilos
+    queijo_kg = (quantidade * 2 * 50) / 1000.0;    // 2 fatias de 50g por sanduíche
+    presunto_kg = (quantidade * 50) / 1000.0;      // 1 fatia de 50g por sanduíche
+    carne_kg = (quantidade * 100) / 1000.0;        // 1 rodela de 100g por sanduíche
+
+    // Saída
+    printf("\nPara %d sanduíche(s), será necessário:\n", quantidade);
+    printf("Queijo:   %.2f kg\n", queijo_kg);
+    printf("Presunto: %.2f kg\n", presunto_kg);
+    printf("Carne:    %.2f kg\n", carne_kg);
+
+    return 0;
+}

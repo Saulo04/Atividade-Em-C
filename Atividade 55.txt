@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+    int idade, maiorIdade = -1, menorIdade = 9999;
+    char sexo;
+    float salario;
+    int count = 0;
+    float somaSalarios = 0;
+    int mulheresAte100 = 0;
+
+    while (1) {
+        printf("Digite a idade (negativa para encerrar): ");
+        scanf("%d", &idade);
+        if (idade < 0) {
+            break;
+        }
+
+        printf("Digite o sexo (M/F): ");
+        scanf(" %c", &sexo);
+
+        printf("Digite o salario: ");
+        scanf("%f", &salario);
+
+        // Acumula salário e conta pessoas para média
+        somaSalarios += salario;
+        count++;
+
+        // Atualiza maior e menor idade
+        if (idade > maiorIdade) {
+            maiorIdade = idade;
+        }
+        if (idade < menorIdade) {
+            menorIdade = idade;
+        }
+
+        // Conta mulheres com salário até 100
+        if ((sexo == 'F' || sexo == 'f') && salario <= 100.0) {
+            mulheresAte100++;
+        }
+    }
+
+    if (count > 0) {
+        printf("\nMedia de salario do grupo: %.2f\n", somaSalarios / count);
+        printf("Maior idade do grupo: %d\n", maiorIdade);
+        printf("Menor idade do grupo: %d\n", menorIdade);
+        printf("Quantidade de mulheres com salario ate R$100,00: %d\n", mulheresAte100);
+    } else {
+        printf("Nenhum dado foi inserido.\n");
+    }
+
+    return 0;
+}

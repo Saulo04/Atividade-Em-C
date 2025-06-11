@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int dia, mes;
+    
+    // Entrada de dados
+    printf("Digite o dia: ");
+    scanf("%d", &dia);
+
+    printf("Digite o mês: ");
+    scanf("%d", &mes);
+
+    // Verificação básica de validade (opcional)
+    if (mes < 1 || mes > 12 || dia < 1 || dia > 30) {
+        printf("Data inválida. Use dias de 1 a 30 e meses de 1 a 12.\n");
+        return 1;
+    }
+
+    // Cálculo: cada mês tem 30 dias
+    int diasPassados = (mes - 1) * 30 + dia;
+
+    // Saída
+    printf("Já se passaram %d dias desde o início do ano.\n", diasPassados);
+
+    return 0;
+}

@@ -1,0 +1,63 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
+
+int main() {
+    int codigoAluno;
+    float nota1, nota2, nota3;
+    float maiorNota, notaMeio, menorNota; // Usadas para ordenar as notas e aplicar os pesos
+    float mediaPonderada;
+
+    printf("--- Calculadora de Media Ponderada de Alunos ---\n");
+    printf("Digite um codigo de aluno negativo para encerrar o programa.\n\n");
+
+    // Loop principal que continua enquanto o código do aluno não for negativo
+    while (1) { // 'while(1)' cria um loop infinito, que será quebrado com 'break'
+        printf("Digite o codigo do aluno: ");
+        scanf("%d", &codigoAluno);
+
+        // Verifica se o código do aluno é negativo para encerrar o programa
+        if (codigoAluno < 0) {
+            printf("Codigo negativo detectado. Encerrando o programa.\n");
+            break; // Sai do loop
+        }
+
+        printf("Digite a primeira nota do aluno: ");
+        scanf("%f", &nota1);
+        printf("Digite a segunda nota do aluno: ");
+        scanf("%f", &nota2);
+        printf("Digite a terceira nota do aluno: ");
+        scanf("%f", &nota3);
+
+        // Encontrando a maior nota e as duas restantes para aplicar os pesos
+        if (nota1 >= nota2 && nota1 >= nota3) {
+            maiorNota = nota1;
+            notaMeio = (nota2 >= nota3) ? nota2 : nota3; // Maior entre as duas restantes
+            menorNota = (nota2 < nota3) ? nota2 : nota3; // Menor entre as duas restantes
+        } else if (nota2 >= nota1 && nota2 >= nota3) {
+            maiorNota = nota2;
+            notaMeio = (nota1 >= nota3) ? nota1 : nota3;
+            menorNota = (nota1 < nota3) ? nota1 : nota3;
+        } else { // nota3 é a maior
+            maiorNota = nota3;
+            notaMeio = (nota1 >= nota2) ? nota1 : nota2;
+            menorNota = (nota1 < nota2) ? nota1 : nota2;
+        }
+        
+        // Calculando a média ponderada
+        // A maior nota tem peso 4, as duas restantes (notaMeio e menorNota) têm peso 3
+        mediaPonderada = (maiorNota * 4 + notaMeio * 3 + menorNota * 3) / (4 + 3 + 3);
+
+        // Mostrando os resultados
+        printf("\n--- Resultados do Aluno %d ---\n", codigoAluno);
+        printf("Notas: %.2f, %.2f, %.2f\n", nota1, nota2, nota3);
+        printf("Media Ponderada: %.2f\n", mediaPonderada);
+
+        if (mediaPonderada >= 5.0) {
+            printf("Situacao: APROVADO\n");
+        } else {
+            printf("Situacao: REPROVADO\n");
+        }
+        printf("-----------------------------------\n\n");
+    }
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

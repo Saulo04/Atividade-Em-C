@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    char letra;
+
+    // Leitura da letra
+    printf("Digite uma letra do alfabeto: ");
+    scanf(" %c", &letra); // espaço antes de %c para ignorar espaços e quebras de linha
+
+    // Verifica se é vogal ou consoante
+    if (letra == 'a' || letra == 'A' ||
+        letra == 'e' || letra == 'E' ||
+        letra == 'i' || letra == 'I' ||
+        letra == 'o' || letra == 'O' ||
+        letra == 'u' || letra == 'U') {
+        printf("A letra '%c' é uma vogal.\n", letra);
+    } else {
+        printf("A letra '%c' é uma consoante.\n", letra);
+    }
+
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int m, n;
+
+    while (1) {
+        printf("Digite os valores de m e n: ");
+        scanf("%d %d", &m, &n);
+
+        if (m <= 0 || n <= 0) {
+            break;
+        }
+
+        int soma = 0;
+        printf("Soma dos %d inteiros consecutivos a partir de %d: ", n, m);
+
+        for (int i = 0; i < n; i++) {
+            soma += m + i;
+        }
+
+        printf("%d\n\n", soma);
+    }
+
+    printf("Programa encerrado.\n");
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int A, B, C;
+
+    // Entrada dos valores
+    printf("Digite três números inteiros distintos:\n");
+    scanf("%d %d %d", &A, &B, &C);
+
+    // Verificação do menor valor usando if
+    if (A < B && A < C) {
+        printf("O menor número é: %d\n", A);
+    } else if (B < A && B < C) {
+        printf("O menor número é: %d\n", B);
+    } else if (C < A && C < B) {
+        printf("O menor número é: %d\n", C);
+    } else {
+        // Caso o usuário não digite números distintos
+        printf("Os números devem ser distintos!\n");
+    }
+
+    return 0;
+}

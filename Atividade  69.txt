@@ -1,0 +1,27 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída para usar printf e scanf
+
+int main() {
+    // Declaração das variáveis para as dimensões e a área
+    float comprimento; // Variável para armazenar o comprimento do terreno
+    float largura;     // Variável para armazenar a largura do terreno
+    float area;        // Variável para armazenar a área calculada
+
+    printf("--- Calculadora de Area de Terrenos Imobilis ---\n");
+
+    // 1. Entrada de dados: Solicita as dimensoes do terreno
+    printf("Digite o comprimento do terreno (em metros): ");
+    scanf("%f", &comprimento); // Lê o valor do comprimento
+
+    printf("Digite a largura do terreno (em metros): ");
+    scanf("%f", &largura);     // Lê o valor da largura
+
+    // 2. Calculo da area
+    area = comprimento * largura; // Multiplica comprimento pela largura para obter a area
+
+    // 3. Exibicao do resultado
+    printf("\n--- Resultado ---\n");
+    printf("O terreno possui as dimensoes: %.2f metros (comprimento) x %.2f metros (largura).\n", comprimento, largura);
+    printf("A area total do terreno e: %.2f metros quadrados.\n", area); // %.2f para formatar com 2 casas decimais
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

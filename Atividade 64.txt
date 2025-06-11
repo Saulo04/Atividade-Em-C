@@ -1,0 +1,40 @@
+#include <stdio.h> // Inclui a biblioteca padrão de entrada e saída
+
+int main() {
+    // Declaração de variáveis
+    float salarioMinimo;        // Valor atual do salário mínimo
+    int carrosVendidos;         // Número de carros vendidos pelo funcionário
+    float valorTotalVendas;     // Valor total das vendas realizadas pelo funcionário
+    float salarioTotal;         // Salário final do funcionário
+
+    // 1. Entrada de dados
+    printf("--- Calculadora de Salario de Vendedor ---\n");
+    printf("Digite o valor atual do salario minimo: R$ ");
+    scanf("%f", &salarioMinimo);
+
+    printf("Digite o numero de carros vendidos pelo funcionario: ");
+    scanf("%d", &carrosVendidos);
+
+    printf("Digite o valor total das vendas realizadas pelo funcionario: R$ ");
+    scanf("%f", &valorTotalVendas);
+
+    // 2. Calculo do salario total
+    // Dois salarios minimos fixos
+    salarioTotal = 2 * salarioMinimo;
+
+    // Comissao fixa de R$ 50,00 por carro vendido
+    salarioTotal += carrosVendidos * 50.00; // Usa 50.00 para garantir que seja um float
+
+    // 5% do valor das vendas
+    salarioTotal += valorTotalVendas * 0.05; // 0.05 representa 5%
+
+    // 3. Apresentacao do resultado
+    printf("\n--- Detalhes do Salario ---\n");
+    printf("Salario Minimo Considerado: R$ %.2f\n", salarioMinimo);
+    printf("Carros Vendidos: %d\n", carrosVendidos);
+    printf("Valor Total das Vendas: R$ %.2f\n", valorTotalVendas);
+    printf("----------------------------------\n");
+    printf("Salario Total do Vendedor: R$ %.2f\n", salarioTotal); // Formata para 2 casas decimais
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

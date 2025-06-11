@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+#define TAMANHO 5  // Você pode alterar o tamanho conforme necessário
+
+int main() {
+    int vetor1[TAMANHO];
+    int vetor2[TAMANHO];
+    int vetorSoma[TAMANHO];
+
+    printf("Digite os elementos do primeiro vetor:\n");
+    for (int i = 0; i < TAMANHO; i++) {
+        printf("vetor1[%d]: ", i);
+        scanf("%d", &vetor1[i]);
+    }
+
+    printf("\nDigite os elementos do segundo vetor:\n");
+    for (int i = 0; i < TAMANHO; i++) {
+        printf("vetor2[%d]: ", i);
+        scanf("%d", &vetor2[i]);
+    }
+
+    // Soma dos vetores
+    for (int i = 0; i < TAMANHO; i++) {
+        vetorSoma[i] = vetor1[i] + vetor2[i];
+    }
+
+    // Exibe o vetor resultante
+    printf("\nVetor soma:\n");
+    for (int i = 0; i < TAMANHO; i++) {
+        printf("vetorSoma[%d] = %d\n", i, vetorSoma[i]);
+    }
+
+    return 0;
+}

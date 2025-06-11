@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nome[50];
+    float salario;
+    float somaSalarios = 0;
+    int contador = 0;
+
+    float maiorSalario = 0, menorSalario = 0;
+    char nomeMaior[50], nomeMenor[50];
+
+    while (1) {
+        printf("Digite o nome do funcionário (ou 'fim' para encerrar): ");
+        fgets(nome, sizeof(nome), stdin);
+        nome[strcspn(nome, "\n")] = '\0'; // Remove \n
+
+        // Verifica se o usuário quer encerrar
+        if (strcmp(nome, "fim") == 0) {
+            break;
+        }
+
+        printf("Digite o salário de %s: ", nome);
+        scanf("%f", &salario);
+        getchar(); // Limpar buffer do teclado
+
+        somaSalarios += salario;
+        contador++;
+
+        if (contador == 1) {
+            // Primeiro funcionário define os valores iniciais
+            maiorSalario = salario;
+            menorSalario = salario;
+            strcpy(nomeMaior, nome);
+            strcpy(nomeMenor, nome);
+        } else {
+            if (salario > maiorSalario) {
+                maiorSalario = salario;
+                strcpy(nomeMaior, nome);
+            }
+
+            if (salario < menorSalario) {
+                menorSalario = salario;
+                strcpy(nomeMenor, nome);
+            }
+        }
+    }
+
+    printf("\n=== RESULTADOS ===\n");
+    if (contador > 0) {
+        printf("Média salarial: %.2f\n", somaSalarios / contador);
+        printf("Maior salário: %.2f (funcionário: %s)\n", maiorSalario, nomeMaior);
+        printf("Menor salário: %.2f (funcionário: %s)\n", menorSalario, nomeMenor);
+    } else {
+        printf("Nenhum funcionário foi registrado.\n");
+    }
+
+    return 0;
+}

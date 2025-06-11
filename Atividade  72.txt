@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    float precoInicial = 5.0;
+    int ingressosIniciais = 120;
+    float despesa = 200.0;
+    float reducao = 0.5;
+    int aumentoIngressos = 26;
+
+    float melhorPreco = 0;
+    float maiorLucro = -1;
+
+    for (int i = 0; i <= 10; i++) {  // Vamos até R$0,00 (5.0 - 0.5*10 = 0.0)
+        float precoAtual = precoInicial - i * reducao;
+        int ingressosVendidos = ingressosIniciais + i * aumentoIngressos;
+        float receita = precoAtual * ingressosVendidos;
+        float lucro = receita - despesa;
+
+        printf("Preço: R$%.2f, Ingressos: %d, Lucro: R$%.2f\n", precoAtual, ingressosVendidos, lucro);
+
+        if (lucro > maiorLucro) {
+            maiorLucro = lucro;
+            melhorPreco = precoAtual;
+        }
+    }
+
+    printf("\nMelhor preço do ingresso: R$%.2f\nMaior lucro: R$%.2f\n", melhorPreco, maiorLucro);
+
+    return 0;
+}

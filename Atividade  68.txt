@@ -1,0 +1,29 @@
+#include <stdio.h> 
+
+int main() {
+    // 1. Inicialização das variáveis
+    int soma = 0;           // Variável para acumular a soma dos números
+    int quantidade = 0;     // Variável para contar quantos números foram somados
+    float mediaAritmetica;  // Variável para armazenar a média (usamos float para ter casas decimais)
+
+    printf("Calculando a media aritmetica dos numeros entre 13 e 73...\n");
+
+    // 2. Iteração: Loop de 13 a 73 (inclusive)
+    for (int i = 13; i <= 73; i++) {
+        soma += i;       // Adiciona o número atual (i) à soma
+        quantidade++;    // Incrementa o contador de quantidade
+    }
+
+    // 3. Cálculo da Média
+    // Verificamos se 'quantidade' não é zero para evitar divisão por zero (embora neste caso nao aconteca)
+    if (quantidade > 0) {
+        mediaAritmetica = (float)soma / quantidade; // Converte 'soma' para float antes da divisão para garantir resultado decimal
+        printf("A soma dos numeros entre 13 e 73 e: %d\n", soma);
+        printf("A quantidade de numeros entre 13 e 73 e: %d\n", quantidade);
+        printf("A media aritmetica dos numeros entre 13 e 73 e: %.2f\n", mediaAritmetica); // %.2f formata para 2 casas decimais
+    } else {
+        printf("Nenhum numero encontrado no intervalo especificado.\n");
+    }
+
+    return 0; // Indica que o programa foi executado com sucesso
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float valor_total;
+    int carlos, andre;
+    float felipe;
+
+    // Entrada
+    printf("Digite o valor total da conta: R$ ");
+    scanf("%f", &valor_total);
+
+    // Carlos e André pagam apenas a parte inteira da divisão
+    carlos = (int)(valor_total / 3);
+    andre = carlos;
+
+    // Felipe paga o restante
+    felipe = valor_total - (carlos + andre);
+
+    // Saída
+    printf("\nCarlos deve pagar: R$ %d,00\n", carlos);
+    printf("André deve pagar:  R$ %d,00\n", andre);
+    printf("Felipe deve pagar: R$ %.2f\n", felipe);
+
+    return 0;
+}
